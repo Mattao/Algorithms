@@ -1,9 +1,13 @@
 package Basics;
 
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
 /**
  * Created by matao on 5/27/16.
  */
-public class Stack<T> {
+public class Stack<T> implements Iterable<T>{
     private int initialCapacity;    // 初始时stack的大小
     private int size;               // stack中元素数量
 
@@ -27,7 +31,7 @@ public class Stack<T> {
     public T pop() {
         size--;
         T popItem = array[size];
-        array[size] = null;
+        array[size] = null;     // 该元素被pop,不会再访问,但因为还被数组引用故不会被回收。故将该引用置为null
         if (size > 0 && size == array.length / 4) {
             resize(array.length / 2);
         }
@@ -55,6 +59,44 @@ public class Stack<T> {
     public boolean isEmpty() {
         return size == 0;
     }
+
+    // 迭代
+    @Override
+    public Iterator<T> iterator() {
+        return new ReverseArrayIterator();
+    }
+
+    @Override
+    public void forEach(Consumer<? super T> action) {
+
+    }
+
+    @Override
+    public Spliterator<T> spliterator() {
+        return null;
+    }
+
+    private class ReverseArrayIterator implements Iterator<T> {
+
+        private int i = size;
+
+        @Override
+        public boolean hasNext() {
+            return i > 0;
+        }
+
+        @Override
+        public T next() {
+            --i;
+            return array[i];
+        }
+
+        @Override
+        public void remove() {
+
+        }
+    }
+
 
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>(3);
