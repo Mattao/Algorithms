@@ -12,11 +12,11 @@ public class Stack<T> implements Iterable<T> {
         Node next;
     }
 
-    private Node head;  // top of a stack
+    private Node top;  // top of a stack
     private int size;   // size of elements
 
     public boolean isEmpty() {
-        return head == null;    // or size == 0
+        return top == null;    // or size == 0
     }
 
     public int getSize() {
@@ -26,14 +26,14 @@ public class Stack<T> implements Iterable<T> {
     public void push(T item) {
         Node node = new Node();
         node.item = item;
-        node.next = head;
-        head = node;
+        node.next = top;
+        top = node;
         size++;
     }
 
     public T pop() {
-        T item = head.item;
-        head = head.next;
+        T item = top.item;
+        top = top.next;
         size--;
         return item;
     }
@@ -45,7 +45,7 @@ public class Stack<T> implements Iterable<T> {
 
     private class ListIterator implements Iterator<T> {
 
-        private Node current = head;
+        private Node current = top;
 
         @Override
         public boolean hasNext() {
