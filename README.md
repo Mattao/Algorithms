@@ -1,2 +1,2 @@
 # Algorithms
-Examples from Book Algorithms
+Examples from Book *Algorithms*
