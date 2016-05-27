@@ -24,10 +24,10 @@ public class Stack<T> implements Iterable<T> {
     }
 
     public void push(T item) {
-        Node node = new Node();
-        node.item = item;
-        node.next = top;
-        top = node;
+        Node oldTop = top;
+        top = new Node();
+        top.item = item;
+        top.next = oldTop;
         size++;
     }
 
