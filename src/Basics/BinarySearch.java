@@ -2,6 +2,7 @@ package Basics;
 
 /**
  * Created by matao on 5/26/16.
+ * The implementation of recursion & non-recursion binary search
  */
 public class BinarySearch {
     public static void main(String[] args) {
