@@ -15,7 +15,7 @@ public class FixedCapacityStack<T> {
     }
 
     public void push(T item) {
-        if (size == capacity) {
+        if (isFull()) {
             throw new RuntimeException("stack over flow!");
         }
         array[size++] = item;
@@ -27,6 +27,10 @@ public class FixedCapacityStack<T> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    public boolean isFull() {
+        return size == capacity;
     }
 
     public int getSize() {
