@@ -1,7 +1,10 @@
-package Basics;
+package Fundamentals;
 
 /**
  * Created by matao on 5/26/16.
+ * 自然语言描述:
+ * 计算两个非负整数p和q的最大公约数: 若q是0, 则最大公约数为p
+ * 否则将p除以q得到余数r, p和q的最大公约数即q和r的最大公约数
  */
 public class GCD {
     public static void main(String[] args) {
