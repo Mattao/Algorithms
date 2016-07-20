@@ -18,6 +18,12 @@ public class BinarySearch {
 
         System.out.println();
 
+        System.out.println(recursionRank1(17, a));
+        System.out.println(recursionRank1(2, a));
+        System.out.println(recursionRank1(32, a));
+
+        System.out.println();
+
         System.out.println(rank(17, a));
         System.out.println(rank(2, a));
         System.out.println(rank(32, a));
@@ -59,6 +65,26 @@ public class BinarySearch {
         } else {
             return mid;
         }
+    }
+
+    public static int recursionRank1(int target, int[] array) {
+        return recursionRank1(target, array, 0, array.length - 1);
+    }
+
+    // x 必然存在于区间 [low, high] 内。(这里使用闭区间表示)
+    public static int recursionRank1(int target, int[] array, int low, int high) {
+        if ((high - low + 1) > 1) {
+            int mid = low + (high - low + 1) / 2;
+            if (target < array[mid]) {
+                return recursionRank1(target, array, low, mid - 1);
+            } else {
+                return recursionRank1(target, array, mid, high);
+            }
+        }
+
+        if (array[low] != target)
+            return -1;
+        return low;
     }
 
     public static int rank(int target, int[] array) {
