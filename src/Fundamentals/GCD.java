@@ -12,7 +12,7 @@ public class GCD {
         System.out.println(recursionGcd(20, 5));
     }
 
-    public static int gcd(int p, int q) {
+    public static int recursionGcd(int p, int q) {
         if (q == 0) {
             return p;
         }
@@ -20,7 +20,7 @@ public class GCD {
         return gcd(q, r);
     }
 
-    public static int recursionGcd(int p, int q) {
+    public static int gcd(int p, int q) {
         while (q > 0) {
             int r = p % q;
             p = q;
