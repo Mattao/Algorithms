@@ -17,7 +17,7 @@ public class GCD {
             return p;
         }
         int r = p % q;
-        return gcd(q, r);
+        return recursionGcd(q, r);
     }
 
     public static int gcd(int p, int q) {
