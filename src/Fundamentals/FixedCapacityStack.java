@@ -2,6 +2,7 @@ package Fundamentals;
 
 /**
  * Created by matao on 5/27/16.
+ * 定容栈
  */
 public class FixedCapacityStack<T> {
     private T[] array;
@@ -16,7 +17,7 @@ public class FixedCapacityStack<T> {
 
     public void push(T item) {
         if (isFull()) {
-            throw new RuntimeException("stack over flow!");
+            throw new RuntimeException("Fixed capacity stack overflow!");
         }
         array[size++] = item;
     }

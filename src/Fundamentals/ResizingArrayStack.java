@@ -6,9 +6,19 @@ import java.util.Iterator;
  * Created by matao on 5/27/16.
  * The implementation of auto-scaled array stack
  */
-public class ResizingArrayStack<T> implements Iterable<T>{
-    private T[] array = (T[]) new Object[1];    // initial capacity is 1
-    private int size;                           // the size of elements
+public class ResizingArrayStack<T> implements Iterable<T> {
+    private T[] array;      // initial capacity is 1
+    private int size;       // the size of elements
+
+    public ResizingArrayStack() {
+        array = (T[]) new Object[1];
+        size = 0;
+    }
+
+    public ResizingArrayStack(int initialCapacity) {
+        array = (T[]) new Object[initialCapacity];
+        size = 0;
+    }
 
     public boolean isEmpty() {
         return size == 0;
