@@ -10,12 +10,12 @@ import edu.princeton.cs.algs4.StdOut;
  */
 public class QuickFind {
     private int[] id;   // 分量id(以触电作为索引)
-    private int N;  // 分量数量
+    private int N;      // 分量数量
 
     public QuickFind(int count) {
         N = count;
         id = new int[N];
-        // 初始化count个触点
+        // 初始化count个触点, id[]代表联通分量标志。初始化时每个触点为一个连通分量
         for (int i = 0; i < N; i++) {
             id[i] = i;
         }

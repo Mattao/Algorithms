@@ -7,13 +7,14 @@ import edu.princeton.cs.algs4.StdOut;
  * Created by matao on 8/14/16.
  */
 public class QuickUnion {
-    private int[] id;   // 分量id(以触电作为索引)
+    private int[] id;   // id[]指向下一个连接的触点
     private int N;      // 分量数量
 
     public QuickUnion(int count) {
         N = count;
         id = new int[N];
-        // 初始化count个触点
+        // 初始化count个触点, id值指向同一个分量中的另一个触点(也可能是自己),即链接至下一个点
+        // 初始化时均指向自己
         for (int i = 0; i < N; i++) {
             id[i] = i;
         }
@@ -39,7 +40,7 @@ public class QuickUnion {
 
     /**
      * @param p
-     * @return p所在分量的标示符(0 - N)
+     * @return 从p点开始寻找根触点, 即连接指向自己的点
      */
     public int find(int p) {
         while (p != id[p]) {
@@ -49,9 +50,7 @@ public class QuickUnion {
     }
 
     /**
-     * 在p和q之间添加连接
-     * 即将两个集合中所有触点对应的id[]元素的值变成同一值。
-     * 将id[p]相等的元素变成id[q], 反之亦可
+     * 将p和q的根节点统一
      *
      * @param p
      * @param q
