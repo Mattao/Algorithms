@@ -1,4 +1,4 @@
-package Sorting;
+package com.matao.sort;
 
 import java.util.Arrays;
 

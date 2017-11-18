@@ -1,4 +1,4 @@
-package Fundamentals;
+package com.matao.fundamental;
 
 import java.util.Iterator;
 
