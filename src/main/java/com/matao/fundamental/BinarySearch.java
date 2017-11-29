@@ -10,36 +10,6 @@ package com.matao.fundamental;
  * 2. 折半时候向上/向下取整的选择,处理不当会造成死循环
  */
 public class BinarySearch {
-    public static void main(String[] args) {
-        int a[] = {1, 2, 5, 6, 9, 15, 32, 87, 104};
-        System.out.println(recursionRank(17, a));
-        System.out.println(recursionRank(2, a));
-        System.out.println(recursionRank(32, a));
-
-        System.out.println();
-
-        System.out.println(recursionRank1(17, a));
-        System.out.println(recursionRank1(2, a));
-        System.out.println(recursionRank1(32, a));
-
-        System.out.println();
-
-        System.out.println(rank(17, a));
-        System.out.println(rank(2, a));
-        System.out.println(rank(32, a));
-
-        System.out.println();
-
-        System.out.println(rank1(17, a));
-        System.out.println(rank1(2, a));
-        System.out.println(rank1(32, a));
-
-        System.out.println();
-
-        System.out.println(rank2(17, a));
-        System.out.println(rank2(2, a));
-        System.out.println(rank2(32, a));
-    }
 
     public static int recursionRank(int target, int[] array) {
         return recursionRank(target, array, 0, array.length - 1);
@@ -147,5 +117,36 @@ public class BinarySearch {
             return -1;
         }
         return low;
+    }
+
+    public static void main(String[] args) {
+        int a[] = {1, 2, 5, 6, 9, 15, 32, 87, 104};
+        System.out.println(recursionRank(17, a));
+        System.out.println(recursionRank(2, a));
+        System.out.println(recursionRank(32, a));
+
+        System.out.println();
+
+        System.out.println(recursionRank1(17, a));
+        System.out.println(recursionRank1(2, a));
+        System.out.println(recursionRank1(32, a));
+
+        System.out.println();
+
+        System.out.println(rank(17, a));
+        System.out.println(rank(2, a));
+        System.out.println(rank(32, a));
+
+        System.out.println();
+
+        System.out.println(rank1(17, a));
+        System.out.println(rank1(2, a));
+        System.out.println(rank1(32, a));
+
+        System.out.println();
+
+        System.out.println(rank2(17, a));
+        System.out.println(rank2(2, a));
+        System.out.println(rank2(32, a));
     }
 }
