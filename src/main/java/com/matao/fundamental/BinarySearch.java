@@ -6,7 +6,7 @@ package com.matao.fundamental;
  * <p>
  * <p>
  * Key Point: <br/>
- *
+ * <p>
  * 1. 折半时候向上/向下取整的选择,处理不当会造成死循环
  * 2. 以为 target 可能是最边上的数，所以 low == high 时候也要处理
  */
