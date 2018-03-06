@@ -4,8 +4,11 @@ import java.util.Iterator;
 
 /**
  * Created by matao on 5/27/16.
+ * 背包是一种不支持从中删除元素的集合数据类型
+ * 它的目的就是用来收集元素并迭代遍历所有元素,
+ * 迭代的顺序不确定
  */
-public class Bag<T> implements Iterable<T>{
+public class Bag<T> implements Iterable<T> {
     private class Node {
         T item;
         Node next;
@@ -59,10 +62,12 @@ public class Bag<T> implements Iterable<T>{
 
     public static void main(String[] args) {
         Bag<Integer> bag = new Bag<>();
-        bag.add(1);
-        bag.add(2);
+        bag.add(101);
+        bag.add(22);
+        bag.add(90);
         for (Integer integer : bag) {
             System.out.println(integer);
         }
+        System.out.println(bag.getSize());
     }
 }
