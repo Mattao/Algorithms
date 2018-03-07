@@ -79,7 +79,7 @@ public class Stack<T> implements Iterable<T> {
         stack.push(2);
         stack.push(3);
         System.out.println("---------------- iteration starts --------------------");
-        for (Integer integer: stack) {
+        for (Integer integer : stack) {
             System.out.println(integer);
         }
 
