@@ -1,7 +1,5 @@
 package com.matao.fundamental;
 
-import java.util.Stack;
-
 /**
  * Created by matao on 5/27/16.
  * Dijkstra 双栈算数表达式求值算法
