@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * Created by matao on 5/27/16.
  */
-public class Queue<T> implements Iterable<T>{
+public class Queue<T> implements Iterable<T> {
     private class Node {
         T item;
         Node next;
@@ -88,7 +88,7 @@ public class Queue<T> implements Iterable<T>{
         queue.enqueue(3);
 
         System.out.println("---------------- iteration starts --------------------");
-        for (Integer integer: queue) {
+        for (Integer integer : queue) {
             System.out.println(integer);
         }
 
