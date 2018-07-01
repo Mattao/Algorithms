@@ -64,6 +64,7 @@ public class QuickUnion {
         N--;
     }
 
+    @SuppressWarnings("Duplicates")
     public static void main(String[] args) {
         // e.g. (4, 3)(3, 8)(6, 5)(9, 4)(2, 1)(8, 9)(5,0)(7,2)(6,1)(1,0)(6,7)
         // (8, 9)(1, 0)(6, 7)这三对将不会被输出
