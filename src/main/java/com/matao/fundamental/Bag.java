@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 /**
  * Created by matao on 5/27/16.
+ * <p>
  * 背包是一种不支持从中删除元素的集合数据类型
  * 它的目的就是用来收集元素并迭代遍历所有元素,
  * 迭代的顺序不确定
