@@ -1,4 +1,4 @@
-package com.matao.fundamental.unionfind;
+package com.matao.fundamentals.unionfind;
 
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;

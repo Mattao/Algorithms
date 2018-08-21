@@ -1,4 +1,4 @@
-package com.matao.fundamental;
+package com.matao.fundamentals;
 
 /**
  * Created by matao on 5/26/16.

@@ -1,4 +1,4 @@
-package com.matao.fundamental;
+package com.matao.fundamentals;
 
 import java.util.Objects;
 
