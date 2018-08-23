@@ -2,16 +2,18 @@ package com.matao.fundamentals;
 
 /**
  * Created by matao on 5/27/16.
- * 定容栈
+ * <p>
+ * Fixed Capacity Stack
  */
 public class FixedCapacityStack<T> {
     private T[] array;
-    private int size;       // 元素数量
-    private int capacity;   // 容量
+    private int size;       // current size of this stack
+    private int capacity;   // the fixed capacity of this stack
 
     public FixedCapacityStack(int capacity) {
         this.capacity = capacity;
         this.size = 0;
+        // generic array creation is disallowed in Java. Instead, we need to use a cast
         this.array = (T[]) new Object[capacity];
     }
 
