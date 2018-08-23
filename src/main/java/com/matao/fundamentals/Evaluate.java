@@ -2,12 +2,13 @@ package com.matao.fundamentals;
 
 /**
  * Created by matao on 5/27/16.
- * Dijkstra 双栈算数表达式求值算法
- * 1) 将操作数压入操作数栈
- * 2) 将运算符压入运算符栈
- * 3) 忽略左括号
- * 4) 遇到右括号时,弹出一个操作符,弹出所需数量的操作数,二元运算后弹出的操作数在前
- * 并将运算符和操作数的运算结果压入操作数栈
+ * <p>
+ * Dijkstra’s Two-Stack Algorithm for Expression Evaluation
+ * 1) Push operands onto the operand stack.
+ * 2) Push operators onto the operator stack.
+ * 3) Ignore left parentheses.
+ * 4) On encountering a right parenthesis, pop an operator, pop the requisite number of operands,
+ *    and push onto the operand stack the result of applying that operator to those operands.
  */
 public class Evaluate {
 
