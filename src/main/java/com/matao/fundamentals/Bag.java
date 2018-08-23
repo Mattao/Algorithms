@@ -5,9 +5,11 @@ import java.util.Iterator;
 /**
  * Created by matao on 5/27/16.
  * <p>
- * 背包是一种不支持从中删除元素的集合数据类型
- * 它的目的就是用来收集元素并迭代遍历所有元素,
- * 迭代的顺序不确定
+ * A bag is a collection where removing items is not supported.
+ * Its purpose is to provide clients with the ability to collect items
+ * and then to iterate through the collected items
+ * (the client can also test if a bag is empty and find its number of items).
+ * The order of iteration is unspecified and should be immaterial to the client.
  */
 public class Bag<T> implements Iterable<T> {
     private class Node {
