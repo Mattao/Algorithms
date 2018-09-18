@@ -54,15 +54,19 @@ public class Ex_1_1_29 {
 
     public static void main(String[] args) {
         int[] whitelist = {1, 1, 5, 5, 5, 7, 7, 7, 9};
+
         int key = 7;
         StdOut.printf("The count smaller than %d: %d\n", key, rank(key, whitelist));
         StdOut.printf("The count equals %d: %d\n", key, count(key, whitelist));
+
         key = 6;
         StdOut.printf("The count smaller than %d: %d\n", key, rank(key, whitelist));
         StdOut.printf("The count equals %d: %d\n", key, count(key, whitelist));
+
         key = 1;
         StdOut.printf("The count smaller than %d: %d\n", key, rank(key, whitelist));
         StdOut.printf("The count equals %d: %d\n", key, count(key, whitelist));
+
         key = 8;
         StdOut.printf("The count smaller than %d: %d\n", key, rank(key, whitelist));
         StdOut.printf("The count equals %d: %d\n", key, count(key, whitelist));
