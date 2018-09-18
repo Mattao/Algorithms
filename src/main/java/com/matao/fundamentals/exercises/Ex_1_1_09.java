@@ -13,14 +13,17 @@ public class Ex_1_1_09 {
     public static void main(String[] args) {
         int N = 100;
         System.out.println(Integer.toBinaryString(N));
-
         System.out.println(toBinaryString(N));
+        System.out.println(Integer.toBinaryString(N).equals(toBinaryString(N)));
     }
 
     public static String toBinaryString(int number) {
         String result = "";
-        for (int i = number; i > 0; i /= 2) {
-            result = (i % 2) + result;
+        while (number != 0) {
+            int remainder = number % 2;
+            int quotient = number / 2;
+            result = remainder + result;
+            number = quotient;
         }
         return result;
     }
