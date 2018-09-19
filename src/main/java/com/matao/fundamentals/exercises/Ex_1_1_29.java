@@ -16,7 +16,6 @@ import edu.princeton.cs.algs4.StdOut;
  */
 public class Ex_1_1_29 {
 
-    // Note: find the last element smaller than the key
     public static int rank(int key, int[] array) {
         int low = 0, high = array.length - 1;
         while (low <= high) {
@@ -44,9 +43,9 @@ public class Ex_1_1_29 {
     }
 
     public static int count(int key, int[] array) {
-        int firstPosSmallerThan = rank(key, array) - 1;
+        int lastPosSmallerThan = rank(key, array) - 1;
         int count = 0;
-        for (int i = firstPosSmallerThan + 1; i < array.length && array[i] == key; i++) {
+        for (int i = lastPosSmallerThan + 1; i < array.length && array[i] == key; i++) {
             count++;
         }
         return count;
