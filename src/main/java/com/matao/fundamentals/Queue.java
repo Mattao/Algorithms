@@ -4,6 +4,9 @@ import java.util.Iterator;
 
 /**
  * Created by matao on 5/27/16.
+ * <p>
+ * A FIFO queue (or just a queue) is a collection that is
+ * based on the first-in-first-out (FIFO) policy.
  */
 public class Queue<T> implements Iterable<T> {
     private class Node {
