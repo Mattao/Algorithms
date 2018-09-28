@@ -49,7 +49,7 @@ public class ResizingArrayStack<T> implements Iterable<T> {
 
     public T pop() {
         T item = array[--size];
-        array[size] = null; // 避免对象游离
+        array[size] = null; // avoid loitering
         if (size > 0 && size == getCapacity() / 4) {
             resize(getCapacity() / 2);
         }
