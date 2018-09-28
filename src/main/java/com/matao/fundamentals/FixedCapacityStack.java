@@ -64,8 +64,15 @@ public class FixedCapacityStack<T> {
         System.out.println("size: " + fixedCapacityStack.getSize());
         System.out.println("isEmpty: " + fixedCapacityStack.isEmpty());
 
+        System.out.println("-------------- after pop 1 item -------------------");
+        fixedCapacityStack.pop();
+        System.out.println("capacity: " + fixedCapacityStack.getCapacity());
+        System.out.println("size: " + fixedCapacityStack.getSize());
+        System.out.println("isEmpty: " + fixedCapacityStack.isEmpty());
+
         fixedCapacityStack.push(4);
-        System.out.println("-------------- after push another 1 item, stack over flow -------------------");
+        fixedCapacityStack.push(5);
+        System.out.println("-------------- after push another 2 item2, stack over flow -------------------");
         System.out.println("capacity: " + fixedCapacityStack.getCapacity());
         System.out.println("size: " + fixedCapacityStack.getSize());
         System.out.println("isEmpty: " + fixedCapacityStack.isEmpty());
