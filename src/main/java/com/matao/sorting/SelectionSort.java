@@ -4,10 +4,17 @@ import java.util.Arrays;
 
 /**
  * Created by matao on 8/13/16.
- * 选择排序法:
- * 对于长度为N的数组,选择排序需要大约 pow(N, 2)/2 的比较
- * 以及 N 次交换
- * 不稳定排序
+ * <pre>
+ * Selection Sort
+ *
+ * 1) Find the smallest item in the array and exchange it with the first entry
+ *    (itself if the first entry is already the smallest).
+ * 2) Then, find the next smallest item and exchange it with the second entry.
+ * 3) Continue in this way until the entire array is sorted.
+ *
+ * for each i from 0 to N-1, there is 1 exchange, so the totals are N exchanges.
+ * and the total compares is (N-1) + (N-2) + ... + 2 + 1 + 0 = N(N-1)/ ~ pow(N, 2)/2 compares.
+ * </pre>
  */
 public class SelectionSort extends BaseSort {
 
@@ -29,10 +36,12 @@ public class SelectionSort extends BaseSort {
 
         Integer[] a = {2, 1, 5, 7, 0, 10};
         selectionSort.sort(a);
+        System.out.println(selectionSort.isSorted(a));
         System.out.println(Arrays.toString(a));
 
         Integer[] b = {1, 1, 0, 3, -1};
         selectionSort.sort(b);
+        System.out.println(selectionSort.isSorted(b));
         System.out.println(Arrays.toString(b));
     }
 }
