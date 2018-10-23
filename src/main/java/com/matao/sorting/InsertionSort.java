@@ -11,7 +11,7 @@ public class InsertionSort extends BaseSort {
     public void sort(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = i; j > 0 && lessThan(a[j], a[j - 1]); j--) {
-                exchange(a, j, j-1);
+                exchange(a, j, j - 1);
             }
         }
     }
@@ -21,10 +21,12 @@ public class InsertionSort extends BaseSort {
 
         Integer[] a = {2, 1, 5, 7, 0, 10};
         insertionSort.sort(a);
+        System.out.println(insertionSort.isSorted(a));
         System.out.println(Arrays.toString(a));
 
         Integer[] b = {1, 1, 0, 3, -1};
         insertionSort.sort(b);
+        System.out.println(insertionSort.isSorted(b));
         System.out.println(Arrays.toString(b));
     }
 }
