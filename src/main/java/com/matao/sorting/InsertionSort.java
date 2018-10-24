@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 /**
  * Created by matao on 8/14/16.
+ * <pre>
+ * Insertion Sort
+ *
+ * for each i from 1 to N-1, exchange a[i] with the entries that are larger in a[0] through a[i-1].
+ *
+ * </pre>
  */
 public class InsertionSort extends BaseSort {
 
