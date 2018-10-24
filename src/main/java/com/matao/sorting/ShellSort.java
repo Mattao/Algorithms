@@ -28,10 +28,12 @@ public class ShellSort extends BaseSort {
 
         Integer[] a = {2, 1, 5, 7, 0, 10};
         shellSort.sort(a);
+        System.out.println(shellSort.isSorted(a));
         System.out.println(Arrays.toString(a));
 
         Integer[] b = {1, 1, 0, 3, -1};
         shellSort.sort(b);
+        System.out.println(shellSort.isSorted(b));
         System.out.println(Arrays.toString(b));
     }
 }
