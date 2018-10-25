@@ -48,10 +48,12 @@ public class MergeSort extends BaseSort {
 
         Integer[] a = {2, 1, 5, 7, 0, 10};
         mergeSort.sort(a);
+        System.out.println(mergeSort.isSorted(a));
         System.out.println(Arrays.toString(a));
 
         Integer[] b = {1, 1, 0, 3, -1};
         mergeSort.sort(b);
+        System.out.println(mergeSort.isSorted(b));
         System.out.println(Arrays.toString(b));
     }
 }
