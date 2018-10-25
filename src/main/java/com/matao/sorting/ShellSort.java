@@ -4,6 +4,14 @@ import java.util.Arrays;
 
 /**
  * Created by matao on 8/14/16.
+ *
+ * <pre>
+ *     Shell Sort
+ *
+ * ShellSort is a simple extension of insertion sort that gains speed by
+ * allowing exchanges of array entries that are far apart,
+ * to produce partially sorted arrays that can be efficiently sorted, eventually by insertion sort.
+ * </pre>
  */
 public class ShellSort extends BaseSort {
 
